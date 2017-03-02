@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.traffic_15, R.drawable.traffic_16, R.drawable.traffic_17,
             R.drawable.traffic_18, R.drawable.traffic_19, R.drawable.traffic_20};
 
-    private String[] titleStrings, detailStrings;
+    private String[] titleStrings, detailStrings, shortStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +34,17 @@ public class MainActivity extends AppCompatActivity {
         titleStrings = getResources().getStringArray(R.array.title);
         detailStrings = getResources().getStringArray(R.array.detail);
 
-        //create ListView
 
-        MyAdepter myAdepter = new MyAdepter(MainActivity.this,ints,titleStrings,detailStrings);
+        //SubString detailStrings cut the word in detailString for limit 30 char
+        shortStrings = new String[detailStrings.length]; //books space in memory String
+            for ( int i=0; i < detailStrings.length; i++ ) {
+                shortStrings[i] = detailStrings[i].substring(0,29)+"...";
+
+            } //end for
+
+            //create ListView
+
+        MyAdepter myAdepter = new MyAdepter(MainActivity.this, ints, titleStrings, shortStrings );
         listView.setAdapter(myAdepter);
     } /* Main Class onCreate*/
 
