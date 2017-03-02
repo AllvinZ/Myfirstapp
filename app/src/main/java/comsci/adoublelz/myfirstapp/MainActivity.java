@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +47,24 @@ public class MainActivity extends AppCompatActivity {
 
         MyAdepter myAdepter = new MyAdepter(MainActivity.this, ints, titleStrings, shortStrings );
         listView.setAdapter(myAdepter);
+
+        //Active when click List View link go to detail
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //when click item anywhere It will keep that Position
+
+                Intent intent = new Intent(MainActivity.this, Detail.class);
+                intent.putExtra("Title", titleStrings[position]);
+                intent.putExtra("Detail", detailStrings[position]);
+                intent.putExtra("Image", ints[position]);
+                startActivity(intent);
+
+            }
+        });
+
+
     } /* Main Class onCreate*/
 
     public void onClickMoreInfo(View view) {
