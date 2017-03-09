@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg10">
+
+    <TextView
+        android:id="@+id/abouttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/my_margin"
+        android:text="@string/aboutMe"
+        android:textSize="@dimen/h1" />
+
+    <ImageView
+        android:id="@+id/aboutimage"
+        android:layout_width="@dimen/mypro"
+        android:layout_height="@dimen/mypro"
+        android:layout_below="@+id/abouttext"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/my_margin"
+        app:srcCompat="@drawable/test1" />
+
+    <Button
+        android:id="@+id/btnAboutme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onclickBack"
+        android:text="Button"
+        android:textSize="@dimen/h3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnAboutme"
+        android:layout_below="@+id/aboutimage"
+        android:layout_margin="@dimen/my_margin"
+        android:background="#47ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/my_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_margin"
+                android:text="@string/name"
+                android:textSize="@dimen/h3" />
+
+            <TextView
+                android:id="@+id/idstu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_margin"
+                android:text="@string/idstu"
+                android:textSize="@dimen/h3" />
+
+            <TextView
+                android:id="@+id/comsci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_margin"
+                android:text="@string/comsi"
+                android:textSize="@dimen/h3" />
+
+            <TextView
+                android:id="@+id/facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my_margin"
+                android:autoLink="web"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:onClick="facebook"
+                android:text="@string/facebook"
+                android:textColor="@android:color/holo_green_dark"
+                android:textColorHighlight="@android:color/background_dark"
+                android:textSize="@dimen/h3" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
