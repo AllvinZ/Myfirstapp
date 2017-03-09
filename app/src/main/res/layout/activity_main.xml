@@ -23,21 +23,36 @@
         android:text="@string/txttitle"
         android:layout_centerVertical="true" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickMoreInfo"
-        android:id="@+id/btnMoreinfo"
-        android:layout_alignParentBottom="true"
-        android:text="@string/moreinfo" />
-
     <ListView
+        android:id="@+id/livTraffic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/layButton"
         android:layout_below="@+id/txttitle"
-        android:layout_above="@+id/btnMoreinfo"
-        android:id="@+id/livTraffic"
-        android:background="#6effffff"
-        android:layout_margin="@dimen/my_margin" />
+        android:layout_margin="@dimen/my_margin"
+        android:background="#6effffff" />
+
+    <LinearLayout
+        android:id="@+id/layButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMoreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickMoreInfo"
+            android:text="@string/moreinfo" />
+
+        <Button
+            android:id="@+id/btnAboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
 
 </RelativeLayout>
