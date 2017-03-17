@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import junit.framework.Test;
+
 public class MainActivity extends AppCompatActivity {
     //Explicit
     ListView listView;
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,aboutme.class);
+                Intent intent = new Intent(MainActivity.this,TestLayout.class);
                 startActivity(intent);
             }
         });

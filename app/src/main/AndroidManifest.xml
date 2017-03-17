@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Detail" />
-        <activity android:name=".aboutme"></activity>
+        <activity android:name=".aboutme" />
+        <activity android:name=".TestLayout"></activity>
     </application>
 
 </manifest>

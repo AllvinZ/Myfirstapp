@@ -3,9 +3,10 @@
     <string name="txttitle">ป้ายจราจร</string>
     <string name="moreinfo">More Info</string>
     <string name="aboutMe">About Me</string>
-    <string name="name">ชื่อ : ธนกร   กิตติธนนพร</string>
-    <string name="idstu">รหัส : 5711020660003</string>
-    <string name="comsi">หลักสูตร : วิทยาการคอมพิวเตอร์</string>
-    <string name="facebook">Facebook : AllVinz Kub</string>
+    <string name="name"><b>ชื่อ : </b> ธนกร   กิตติธนนพร</string>
+    <string name="idstu"><b>รหัส : </b> 5711020660003</string>
+    <string name="comsi"><b>หลักสูตร : </b> วิทยาการคอมพิวเตอร์</string>
+    <string name="facebook"><b>Facebook : </b> AllVinz Kub</string>
+    <string name="tel"><b>Tel  :  </b> 0910732604</string>
 
 </resources>
