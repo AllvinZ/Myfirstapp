@@ -47,6 +47,16 @@ public class TestLayout extends AppCompatActivity {
             }
         }); //end Toast onLongClick
 
+            //Phone onclick
+            TextView phoneTextView = (TextView) findViewById(R.id.txtTel);
+            phoneTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
+                phoneIntent.setData(Uri.parse("tel:0910732604"));
+                startActivity(phoneIntent);
+            }
+        });
 
 
     } //main method
